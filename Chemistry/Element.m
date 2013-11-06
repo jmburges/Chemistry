@@ -25,4 +25,15 @@
     return self;
 }
 
+- (BOOL)isEqual:(id)object{
+    Element* element = (Element*)object;
+    if (self.symbol == element.symbol && self.atomicNumber == element.atomicNumber) {
+       
+        return true;
+        
+    } else {
+        return false;
+    }
+}
+
 @end
