@@ -18,13 +18,14 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
    
-    MoleculeStore *myStore = [MoleculeStore sharedStore];
-    myStore.myString=@"boop";
-    NSLog(@"%i",MAX_ROWS);
-    
-    NSLog(@"%@",[Molecule water]);
+//    MoleculeStore *myStore = [MoleculeStore sharedStore];
+//    myStore.myString=@"boop";
+//    NSLog(@"%i",MAX_ROWS);
+//    
+//    NSLog(@"%@",[Molecule water]);
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -32,8 +33,8 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    MoleculeStore *myNewStore = [MoleculeStore sharedStore];
-    NSLog(@"%@",myNewStore.myString);
+    //MoleculeStore *myNewStore = [MoleculeStore sharedStore];
+  //  NSLog(@"%@",myNewStore.myString);
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -55,6 +56,16 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+#ifdef DEBUG
+    extern void __gcov_flush(void);
+    __gcov_flush();
+#endif
 }
 
+#ifdef DEBUG
++ (void)initialize {
+    [[NSUserDefaults standardUserDefaults] setValue:@"XCTestLog,GcovTestObserver"
+                                             forKey:@"XCTestObserverClass"];
+}
+#endif
 @end

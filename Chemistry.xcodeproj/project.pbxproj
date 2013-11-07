@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8336CEF1829E5DC00DFD6FB /* ElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8336CEE1829E5DC00DFD6FB /* ElementTests.m */; };
 		D863D43917FC5A76007A601E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D863D43817FC5A76007A601E /* Foundation.framework */; };
 		D863D43B17FC5A76007A601E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D863D43A17FC5A76007A601E /* CoreGraphics.framework */; };
 		D863D43D17FC5A76007A601E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D863D43C17FC5A76007A601E /* UIKit.framework */; };
@@ -24,6 +25,7 @@
 		D863D47517FC669E007A601E /* oxygen.m in Sources */ = {isa = PBXBuildFile; fileRef = D863D47417FC669E007A601E /* oxygen.m */; };
 		D863D4BC17FCC965007A601E /* MoleculeStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D863D4BB17FCC965007A601E /* MoleculeStore.m */; };
 		D863D4BF17FCCC64007A601E /* constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D863D4BE17FCCC64007A601E /* constants.m */; };
+		D893C126182BDB3300FF4BD2 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = D893C125182BDB3300FF4BD2 /* View.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8336CEE1829E5DC00DFD6FB /* ElementTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementTests.m; sourceTree = "<group>"; };
 		D863D43517FC5A76007A601E /* Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemistry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D863D43817FC5A76007A601E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D863D43A17FC5A76007A601E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,6 +66,8 @@
 		D863D4BB17FCC965007A601E /* MoleculeStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoleculeStore.m; sourceTree = "<group>"; };
 		D863D4BD17FCCC64007A601E /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		D863D4BE17FCCC64007A601E /* constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = constants.m; sourceTree = "<group>"; };
+		D893C123182AD80200FF4BD2 /* GcovTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GcovTestObserver.m; sourceTree = "<group>"; };
+		D893C125182BDB3300FF4BD2 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,7 @@
 		D863D42C17FC5A76007A601E = {
 			isa = PBXGroup;
 			children = (
+				D893C125182BDB3300FF4BD2 /* View.xib */,
 				D863D43E17FC5A76007A601E /* Chemistry */,
 				D863D45717FC5A76007A601E /* ChemistryTests */,
 				D863D43717FC5A76007A601E /* Frameworks */,
@@ -154,8 +160,10 @@
 		D863D45717FC5A76007A601E /* ChemistryTests */ = {
 			isa = PBXGroup;
 			children = (
+				D893C123182AD80200FF4BD2 /* GcovTestObserver.m */,
 				D863D45D17FC5A76007A601E /* ChemistryTests.m */,
 				D863D45817FC5A76007A601E /* Supporting Files */,
+				D8336CEE1829E5DC00DFD6FB /* ElementTests.m */,
 			);
 			path = ChemistryTests;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 				D863D43117FC5A76007A601E /* Sources */,
 				D863D43217FC5A76007A601E /* Frameworks */,
 				D863D43317FC5A76007A601E /* Resources */,
+				D8336CF0182ACF6F00DFD6FB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -215,6 +224,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Joe Burgess";
+				TargetAttributes = {
+					D863D44F17FC5A76007A601E = {
+						TestTargetID = D863D43417FC5A76007A601E;
+					};
+				};
 			};
 			buildConfigurationList = D863D43017FC5A76007A601E /* Build configuration list for PBXProject "Chemistry" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -248,11 +262,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D893C126182BDB3300FF4BD2 /* View.xib in Resources */,
 				D863D45C17FC5A76007A601E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D8336CF0182ACF6F00DFD6FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = XCodeCoverage/exportenv.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D863D43117FC5A76007A601E /* Sources */ = {
@@ -273,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8336CEF1829E5DC00DFD6FB /* ElementTests.m in Sources */,
 				D863D45E17FC5A76007A601E /* ChemistryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +360,8 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -367,6 +401,8 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -374,6 +410,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -384,9 +421,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chemistry/Chemistry-Prefix.pch";
 				INFOPLIST_FILE = "Chemistry/Chemistry-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -397,9 +436,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chemistry/Chemistry-Prefix.pch";
 				INFOPLIST_FILE = "Chemistry/Chemistry-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -409,11 +450,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Chemistry.app/Chemistry";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chemistry/Chemistry-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -421,7 +465,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "ChemistryTests/ChemistryTests-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -430,15 +476,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Chemistry.app/Chemistry";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chemistry/Chemistry-Prefix.pch";
 				INFOPLIST_FILE = "ChemistryTests/ChemistryTests-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
