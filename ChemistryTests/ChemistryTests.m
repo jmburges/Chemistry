@@ -32,4 +32,9 @@
     XCTAssert(true, @"This is true");
 }
 
+- (void)testFaile
+{
+    XCTAssert(false, @"It broke");
+}
+
 @end
