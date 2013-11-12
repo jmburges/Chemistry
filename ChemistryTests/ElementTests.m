@@ -40,4 +40,11 @@
     XCTAssert([element isEqual:compareElement], @"Checking Compare Element");
 }
 
+- (void) testinginitWithNothing
+{
+    Element *element = [[Element alloc] init];
+    XCTAssert([element.symbol isEqualToString:@""], @"Checking String should be empty");
+    XCTAssert([element.atomicNumber isEqualToNumber:@0], @"Atomic Num should be 0");
+}
+
 @end
